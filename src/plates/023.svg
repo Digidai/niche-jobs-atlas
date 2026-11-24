@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- screen: the picture is drawn in dashes, it cannot be seen -->
+  <path d="M70 24h260v118H70z" fill="var(--plate-fill, #ebe2cd)" />
+  <g stroke-width="1.8" stroke-dasharray="4 7">
+    <circle cx="274" cy="60" r="16" />
+    <path d="M78 134q50-56 96-20 40-44 90-6 30-22 58 6" />
+    <path d="M150 132v-26M150 96a7 7 0 1 0 0-.1" />
+  </g>
+  <!-- narrator's microphone -->
+  <path d="M52 268h36M70 268v-58" />
+  <path d="M58 172q0-12 12-12t12 12v26q0 12-12 12t-12-12z" fill="currentColor" />
+  <path d="M48 196q0 22 22 22t22-22" />
+  <!-- words turning into dots that reach the audience -->
+  <g stroke="var(--accent, #c63d27)" stroke-width="3.4" stroke-dasharray="0.1 11">
+    <path class="a-dash" style="--d:1.6s;--to:-44" d="M96 182q60-34 78 36" />
+    <path class="a-dash" style="--d:1.6s;--to:-44" d="M98 176q90-60 150 40" />
+    <path class="a-dash" style="--d:1.6s;--to:-44" d="M98 168q130-80 222 46" />
+  </g>
+  <!-- audience -->
+  <g fill="var(--tint, #e2cf9f)">
+    <path d="M146 276v-24q0-12 12-12h32q12 0 12 12v24zM220 276v-24q0-12 12-12h32q12 0 12 12v24zM294 276v-24q0-12 12-12h32q12 0 12 12v24z" />
+  </g>
+  <g fill="var(--plate-fill, #ebe2cd)">
+    <circle cx="174" cy="226" r="14" /><circle cx="248" cy="226" r="14" /><circle cx="322" cy="226" r="14" />
+  </g>
+  <path d="M164 224h20M238 224h20" stroke-width="5" />
+  <path d="M314 224q3-4 6 0M324 224q3-4 6 0" stroke-width="1.8" />
+  <path d="M168 232q6 5 12 0M242 232q6 5 12 0M316 232q6 5 12 0" stroke-width="1.8" />
+</svg>

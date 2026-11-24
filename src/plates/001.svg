@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M70 46c22 8 34 30 32 54l24 46c3 8-2 13-12 13h-8c-3 8 0 14 6 19l-7 10c6 8 5 16 0 22-8 20-26 28-48 30" />
+  <path d="M74 112q9 6 18 0" />
+  <path d="M112 152q4-5 9-2" />
+  <path d="M150 212h226" />
+  <path d="M150 212v40M376 212v40" stroke-width="1.6" />
+  <g fill="var(--plate-fill, #ebe2cd)">
+    <path d="M168 140q27-10 54 0 7 32 0 64-27 9-54 0-7-32 0-64z" />
+    <path d="M243 140q27-10 54 0 7 32 0 64-27 9-54 0-7-32 0-64z" fill="var(--tint, #e2cf9f)" />
+    <path d="M318 140q27-10 54 0 7 32 0 64-27 9-54 0-7-32 0-64z" />
+    <path d="M191 136v-12h8v12M266 136v-12h8v12M341 136v-12h8v12" />
+  </g>
+  <g fill="currentColor" stroke="none" style="font-family:var(--font-latin, Georgia, serif)" font-style="italic" font-size="20" text-anchor="middle">
+    <text x="195" y="180">A</text>
+    <text x="270" y="180">B</text>
+    <text x="345" y="180">C</text>
+  </g>
+  <g stroke="var(--accent, #c63d27)" stroke-dasharray="7 9">
+    <path class="a-dash" style="--d:1.6s" d="M262 112q-15-12-30 0t-30 0-30 0-30 0" />
+    <path class="a-dash" style="--d:1.6s;--delay:-.5s" d="M256 92q-15-12-30 0t-30 0-30 0-22-2" />
+    <path class="a-dash" style="--d:1.6s;--delay:-1s" d="M268 72q-15-12-30 0t-30 0-30 0" />
+  </g>
+  <path d="M40 252h336" stroke-width="1.6" stroke-dasharray="2 7" />
+</svg>

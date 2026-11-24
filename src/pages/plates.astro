@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import Plate from '../components/Plate.astro';
+import { orderOf } from '../data/orders';
+import Base from '../layouts/Base.astro';
+import { pad, url } from '../lib/site';
+
+const jobs = (await getCollection('jobs')).sort((a, b) => a.data.no - b.data.no);
+---
+
+<Base title="图版一览" description="小众职业图鉴的全部图版：每个职业一幅手写的 SVG 线描。" section="plates">
+  <div class="page" style="padding-bottom:1.5rem">
+    <header class="page-head">
+      <p class="kicker">Plates</p>
+      <h1>图版一览</h1>
+      <p class="lede">每个职业一幅线描，画的是它最容易被认出来的那件东西。图版都是手写的 SVG，会动。</p>
+    </header>
+  </div>
+  <div class="gallery">
+    {
+      jobs.map((job) => (
+        <a href={url(`/jobs/${job.id}/`)} style={`--accent:${orderOf(job.data.order).color}`}>
+          <Plate no={job.data.no} name={job.data.name} accent={orderOf(job.data.order).color} mode="full" />
+          <span class="cover-caption">
+            <b>No. {pad(job.data.no)}</b> {job.data.name}
+          </span>
+        </a>
+      ))
+    }
+  </div>
+</Base>

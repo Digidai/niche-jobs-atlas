@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <g fill="var(--plate-fill, #ebe2cd)">
+    <path d="M36 64h146v48H36zM36 120h146v48H36zM36 176h146v48H36z" />
+  </g>
+  <path d="M28 232h162" stroke-width="3.4" />
+  <path d="M124 80h44M124 92h30M124 136h44M124 148h30M124 192h44M124 204h30" stroke-width="1.8" />
+  <g fill="var(--accent, #c63d27)" stroke="none">
+    <circle class="a-blink" style="--d:1s" cx="52" cy="88" r="4.5" />
+    <circle class="a-blink" style="--d:1s;--delay:-.25s" cx="68" cy="88" r="4.5" />
+    <circle class="a-blink" style="--d:1s;--delay:-.5s" cx="84" cy="88" r="4.5" />
+    <circle class="a-blink" style="--d:1s;--delay:-.75s" cx="100" cy="88" r="4.5" />
+    <circle class="a-blink" style="--d:1s;--delay:-.4s" cx="52" cy="144" r="4.5" />
+    <circle class="a-blink" style="--d:1s;--delay:-.65s" cx="68" cy="144" r="4.5" />
+    <circle class="a-blink" style="--d:1s;--delay:-.9s" cx="84" cy="144" r="4.5" />
+    <circle class="a-blink" style="--d:1s;--delay:-.15s" cx="100" cy="144" r="4.5" />
+    <circle class="a-blink" style="--d:1s;--delay:-.8s" cx="52" cy="200" r="4.5" />
+    <circle class="a-blink" style="--d:1s;--delay:-.05s" cx="68" cy="200" r="4.5" />
+    <circle class="a-blink" style="--d:1s;--delay:-.3s" cx="84" cy="200" r="4.5" />
+    <circle class="a-blink" style="--d:1s;--delay:-.55s" cx="100" cy="200" r="4.5" />
+  </g>
+  <path d="M182 88q30 0 34 30M182 144h26M182 200q30 0 34-30" stroke-width="1.8" stroke-dasharray="4 6" />
+  <circle cx="290" cy="144" r="78" fill="var(--plate-fill, #ebe2cd)" />
+  <circle cx="290" cy="144" r="68" stroke-width="1.4" />
+  <path d="M290 82v12M290 194v12M228 144h12M340 144h12M259 90l5 9M316 189l5 9M236 113l9 5M335 170l9 5M236 175l9-5M335 118l9-5M259 198l5-9M316 99l5-9" stroke-width="2" />
+  <path d="M290 144v-40M290 144l28 16" stroke-width="4" />
+  <path class="a-tick" style="--d:30s;transform-box:view-box;transform-origin:290px 144px" d="M290 158V86" stroke="var(--accent, #c63d27)" stroke-width="2" />
+  <circle cx="290" cy="144" r="5" fill="var(--accent, #c63d27)" stroke="none" />
+  <path d="M212 258h20v-14h14v14h20v-14h14v14h20v-14h14v14h20v-14h14v14h18" stroke-width="1.8" />
+  <path d="M36 258h150" stroke-width="1.6" stroke-dasharray="2 7" />
+</svg>

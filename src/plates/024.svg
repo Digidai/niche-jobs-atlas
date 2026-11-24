@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- practice grid -->
+  <path d="M90 26h220v220H90z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M90 136h220M200 26v220M90 26l220 220M310 26L90 246" stroke-width="1" stroke-dasharray="4 7" />
+  <!-- guides -->
+  <path d="M30 60h340M30 222h340" stroke="var(--accent, #c63d27)" stroke-width="1.2" stroke-dasharray="2 6" />
+  <!-- the character yong (eternity), outline only -->
+  <text x="200" y="207" text-anchor="middle" font-size="196" font-weight="900" font-family="'Atlas Song', 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'Source Han Serif SC', 'SimSun', serif" fill="var(--tint, #e2cf9f)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round">&#x6C38;</text>
+  <!-- bezier handles -->
+  <g stroke="var(--accent, #c63d27)" stroke-width="1.6">
+    <path d="M176 48l52 16M118 112l44-10M250 96l42-22M236 214l48 4M150 222l-36-24" />
+  </g>
+  <g fill="var(--plate-fill, #ebe2cd)" stroke="var(--accent, #c63d27)" stroke-width="2">
+    <path d="M198 52h8v8h-8zM136 103h8v8h-8zM266 81h8v8h-8zM256 211h8v8h-8zM128 206h8v8h-8z" />
+  </g>
+  <g fill="var(--accent, #c63d27)" stroke="none">
+    <circle class="a-nudge" style="--d:2.4s;--x:4px;--y:-4px" cx="176" cy="48" r="4" />
+    <circle class="a-nudge" style="--d:2.4s;--x:-4px;--y:4px" cx="228" cy="64" r="4" />
+    <circle class="a-nudge" style="--d:2.8s;--x:-5px;--y:3px" cx="118" cy="112" r="4" />
+    <circle class="a-nudge" style="--d:2.8s;--x:5px;--y:-3px" cx="292" cy="74" r="4" />
+    <circle class="a-nudge" style="--d:3.2s;--x:5px;--y:3px" cx="284" cy="218" r="4" />
+    <circle class="a-nudge" style="--d:3.2s;--x:-4px;--y:-4px" cx="114" cy="198" r="4" />
+  </g>
+  <!-- cursor -->
+  <path class="a-nudge" style="--d:2.4s;--x:-4px;--y:4px" d="M238 70v26l7-6 5 11 5-2-5-11h9z" fill="currentColor" stroke="var(--plate-fill, #ebe2cd)" stroke-width="1.5" />
+  <!-- counter -->
+  <g fill="currentColor" stroke="none" style="font-family:var(--font-latin, Georgia, serif)" font-style="italic" font-size="15">
+    <text x="322" y="262">1 / 6763</text>
+  </g>
+</svg>

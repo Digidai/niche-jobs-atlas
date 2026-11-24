@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- cow leg, front view -->
+  <path d="M112 18c6 44 22 78 28 112M244 18c-6 44-22 78-28 112" />
+  <path d="M112 18c6 44 22 78 28 112h76c6-34 22-68 28-112z" fill="var(--plate-fill, #ebe2cd)" stroke="none" />
+  <path d="M132 96q46 14 92 0" stroke-width="1.6" stroke-dasharray="3 7" />
+  <!-- dewclaws -->
+  <path d="M138 128q-12 6-8 20M218 128q12 6 8 20" stroke-width="2" />
+  <!-- two claws -->
+  <path d="M140 130l-22 80q-2 12 10 12h46l4-88z" fill="var(--tint, #e2cf9f)" />
+  <path d="M216 130l22 80q2 12-10 12h-46l-4-88z" fill="var(--tint, #e2cf9f)" />
+  <path d="M130 196h44M182 196h44" stroke-width="1.6" />
+  <!-- wooden block glued under the healthy claw -->
+  <path d="M112 222h66v22h-66z" fill="var(--accent, #c63d27)" stroke="var(--accent, #c63d27)" />
+  <path d="M124 233h42" stroke="var(--plate-fill, #ebe2cd)" stroke-width="1.4" />
+  <!-- bandage on the other claw -->
+  <path d="M190 168l40 10M188 180l44 10" stroke-width="2" />
+  <!-- hoof knife -->
+  <g class="a-nudge" style="--d:1.6s;--x:-8px;--y:5px">
+    <path d="M352 86l-44 50" stroke-width="10" />
+    <path d="M308 136l-28 32q-8 10 4 12 8 0 8-8" stroke-width="3.4" />
+  </g>
+  <!-- shavings -->
+  <g stroke-width="2">
+    <path class="a-fall" style="--d:1.6s;--y:40px" d="M262 196q8-8 12 0t-8 6" />
+    <path class="a-fall" style="--d:1.6s;--delay:-.6s;--y:36px" d="M284 206q7-7 10 0t-7 5" />
+    <path class="a-fall" style="--d:1.6s;--delay:-1.1s;--y:42px" d="M250 210q6-6 9 0" />
+  </g>
+  <!-- horseshoe -->
+  <path d="M306 268v-34a26 26 0 0 1 52 0v34h-12v-34a14 14 0 0 0-28 0v34z" fill="var(--plate-fill, #ebe2cd)" />
+  <g fill="currentColor" stroke="none">
+    <circle cx="312" cy="256" r="1.8" /><circle cx="312" cy="242" r="1.8" /><circle cx="318" cy="224" r="1.8" />
+    <circle cx="352" cy="256" r="1.8" /><circle cx="352" cy="242" r="1.8" /><circle cx="346" cy="224" r="1.8" />
+  </g>
+  <path d="M40 246h66M184 246h110" stroke-width="1.6" stroke-dasharray="2 7" />
+</svg>

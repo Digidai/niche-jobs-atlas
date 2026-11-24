@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- a leaf of an old thread-bound book -->
+  <path d="M64 40h214v212H64z" fill="var(--card, #f9f4e9)" transform="rotate(-3 171 146)" />
+  <g transform="rotate(-3 171 146)">
+    <!-- binding stitches on the right edge -->
+    <path d="M260 40v212" stroke-width="1.4" />
+    <path d="M260 62h18M260 110h18M260 158h18M260 206h18" stroke-width="2" />
+    <!-- columns of text -->
+    <g stroke-width="2.2" stroke-dasharray="7 5">
+      <path d="M238 58v176M214 58v64M214 150v84M190 58v176M166 58v40M166 126v108M142 58v176M118 58v96M118 186v48M94 58v176" />
+    </g>
+    <!-- wormholes -->
+    <g fill="var(--plate-fill, #ebe2cd)" stroke-width="1.8">
+      <path d="M204 126q10-8 20 0 8 10-2 18-14 6-20-4-4-8 2-14z" />
+      <path d="M156 100q8-6 16 0 6 10-2 16-12 4-16-4-2-8 2-12z" />
+      <path d="M106 158q10-8 22 2 8 12-4 22-14 6-22-6-4-10 4-18z" />
+      <path d="M84 84q6-4 10 2 2 8-6 8-8-2-4-10z" />
+    </g>
+    <!-- patch being laid over one hole -->
+    <path d="M96 150h44v42H96z" fill="var(--tint, #e2cf9f)" fill-opacity=".8" stroke="var(--accent, #c63d27)" stroke-dasharray="6 5" />
+  </g>
+  <!-- brush -->
+  <g class="a-nudge" style="--d:2.2s;--x:8px;--y:5px">
+    <path d="M262 62L166 150" stroke-width="7" />
+    <path d="M166 150l-22 20" stroke="var(--tint, #e2cf9f)" stroke-width="9" />
+    <path d="M166 150l-30 30q-6 4-4-4l12-28z" fill="currentColor" />
+  </g>
+  <!-- bowl of paste -->
+  <path d="M298 214h76q0 40-38 40t-38-40z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M302 222q34 12 68 0" fill="var(--tint, #e2cf9f)" stroke-width="1.8" />
+  <path d="M318 254h36" stroke-width="3" />
+  <!-- tweezers -->
+  <path d="M310 60l44 96M330 54l28 100" stroke-width="2.6" />
+  <path d="M308 56q10-10 24-4" stroke-width="2.6" />
+</svg>

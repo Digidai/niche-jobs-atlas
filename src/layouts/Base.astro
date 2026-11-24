@@ -1,0 +1,108 @@
+---
+import { getCollection } from 'astro:content';
+import '../styles/global.css';
+import { SITE, url } from '../lib/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** 当前所在的栏目，用来高亮导航 */
+  section?: 'atlas' | 'plates' | 'appendix' | 'guide';
+}
+
+const { title, description = SITE.description, section = 'atlas' } = Astro.props;
+const fullTitle = title ? `${title} · ${SITE.title}` : `${SITE.title}：${SITE.subtitle}`;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL(url('/og.png'), Astro.site).href;
+
+const slugs = (await getCollection('jobs')).map((job) => job.id);
+const jobsBase = url('/jobs/');
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
+    <meta name="theme-color" content="#f3ecdd" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.title} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <a class="skip" href="#main">跳到正文</a>
+    <header class="site-head">
+      <a class="brand" href={url('/')} aria-label={`${SITE.title} 首页`}>
+        <span class="seal" aria-hidden="true">鉴</span>
+        <span class="brand-name">{SITE.title}</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href={url('/')} aria-current={section === 'atlas' ? 'page' : undefined}>图鉴</a>
+        <a href={url('/plates/')} aria-current={section === 'plates' ? 'page' : undefined}>图版</a>
+        <a href={url('/appendix/')} aria-current={section === 'appendix' ? 'page' : undefined}>附录</a>
+        <a href={url('/guide/')} aria-current={section === 'guide' ? 'page' : undefined}>凡例</a>
+        <a href={SITE.repo} rel="noopener">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-foot">
+      <div class="foot-inner">
+        <p class="foot-title">
+          <span class="seal seal-sm" aria-hidden="true">鉴</span>
+          {SITE.title} · {SITE.edition}
+        </p>
+        <p>
+          文字与图版以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans" rel="noopener">CC BY 4.0</a> 发布，代码以 MIT 许可开源。
+          条目里的数字都带年份和出处，引语是原话；发现错漏，欢迎到
+          <a href={`${SITE.repo}/issues`} rel="noopener">GitHub</a> 提出来。
+        </p>
+        <p class="foot-links">
+          <a href={url('/guide/')}>怎么读这本图鉴</a>
+          <a href={url('/appendix/')}>伪物种与待收录名单</a>
+          <a href={`${SITE.repo}/blob/main/CONTRIBUTING.md`} rel="noopener">投稿一种职业</a>
+        </p>
+      </div>
+    </footer>
+
+    <script is:inline define:vars={{ slugs, jobsBase }}>
+      // “随机遇见”：先卖个关子，再带你去一个随机条目。
+      const lines = ['草丛里有动静……', '好像有什么东西出没……', '别出声，它来了……'];
+      for (const button of document.querySelectorAll('[data-encounter]')) {
+        button.addEventListener('click', () => {
+          if (button.disabled) return;
+          const current = location.pathname.replace(/\/$/, '').split('/').pop();
+          const pool = slugs.filter((slug) => slug !== current);
+          const slug = pool[Math.floor(Math.random() * pool.length)];
+          const label = button.querySelector('[data-encounter-label]') ?? button;
+          button.disabled = true;
+          button.classList.add('is-rustling');
+          label.textContent = lines[Math.floor(Math.random() * lines.length)];
+          const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          setTimeout(() => { location.href = jobsBase + slug + '/'; }, reduce ? 0 : 700);
+        });
+      }
+      // 浏览器“后退”回来时，把按钮恢复原样。
+      window.addEventListener('pageshow', () => {
+        for (const button of document.querySelectorAll('[data-encounter]')) {
+          button.disabled = false;
+          button.classList.remove('is-rustling');
+          const label = button.querySelector('[data-encounter-label]');
+          if (label && label.dataset.encounterLabel) label.textContent = label.dataset.encounterLabel;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- heartbeat line -->
+  <path d="M20 86h96l12-10 12 10h18l10-34 14 62 12-28h30l12-10 12 10h132" stroke="var(--accent, #c63d27)" stroke-width="2.4" />
+  <circle class="a-blink" style="--d:1.2s" cx="380" cy="86" r="4" fill="var(--accent, #c63d27)" stroke="none" />
+  <!-- heart -->
+  <g class="a-beat" style="--d:1.2s">
+    <path d="M200 206c-52-34-62-66-44-84 16-16 36-8 44 8 8-16 28-24 44-8 18 18 8 50-44 84z" fill="var(--accent, #c63d27)" stroke="var(--accent, #c63d27)" />
+    <path d="M168 138q-8 10-2 24" stroke="var(--plate-fill, #ebe2cd)" stroke-width="3" />
+  </g>
+  <!-- two hands holding it up -->
+  <path d="M24 268q10-42 52-52l58-2q16 0 22 10l14 20q8 12-4 14l-60 6q-18 2-30 14z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M100 216q20-22 46-18 12 2 14 12" />
+  <path d="M376 268q-10-42-52-52l-58-2q-16 0-22 10l-14 20q-8 12 4 14l60 6q18 2 30 14z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M300 216q-20-22-46-18-12 2-14 12" />
+  <path d="M24 268h60M316 268h60" stroke-width="5" />
+  <!-- the phone that never switches off -->
+  <path d="M330 150h34q6 0 6 6v50q0 6-6 6h-34q-6 0-6-6v-50q0-6 6-6z" fill="var(--plate-fill, #ebe2cd)" transform="rotate(10 347 181)" />
+  <path d="M340 204h14" stroke-width="2" transform="rotate(10 347 181)" />
+  <g stroke-width="2">
+    <path class="a-blink" style="--d:.8s" d="M318 150q-8 10-6 22" />
+    <path class="a-blink" style="--d:.8s;--delay:-.25s" d="M308 142q-12 16-9 34" />
+    <path class="a-blink" style="--d:.8s" d="M378 146q9 8 10 20" />
+  </g>
+</svg>

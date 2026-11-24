@@ -1,0 +1,115 @@
+---
+import Pips from '../components/Pips.astro';
+import Base from '../layouts/Base.astro';
+import { RARITY, SITE, TREND, url } from '../lib/site';
+
+const levels = [5, 4, 3, 2, 1];
+const rarityNotes: Record<number, string> = {
+  5: '例：守时人、拟音师、蚊子饲养员',
+  4: '例：饱和潜水员、字体设计师、化石修理师',
+  3: '例：引航员、古籍修复师、器官捐献协调员',
+  2: '例：嗅辨员、钢琴调律师、人工增雨作业员',
+  1: '人不少，只是没人注意。例：塔吊司机',
+};
+---
+
+<Base
+  title="凡例：怎么读这本图鉴"
+  description="小众职业图鉴的凡例：每一页怎么读，稀有度怎么定，资料怎么核对，以及如何投稿和纠错。"
+  section="guide"
+>
+  <div class="page">
+    <header class="page-head">
+      <p class="kicker">How to read this guide</p>
+      <h1>凡例</h1>
+      <p class="lede">这是一本借了博物图鉴体例的职业图鉴。把职业叫作“物种”是个玩笑，里面的事实不是。</p>
+    </header>
+
+    <section>
+      <h2><small>What this is</small>这本图鉴是什么</h2>
+      <p>
+        有些工作你每天都在受益，却从没见过干这行的人：自来水没有白白漏掉，手机上的时间分秒不差，电影里的脚步声踩在点上。这本图鉴收的就是这样的职业。入选的标准有三条：真实存在，可以查证；从业者少，或者人不少却很少被看见；有一个让人想追问下去的地方。
+      </p>
+      <p>
+        {SITE.edition}收录 30 种，分成六个“目”。“目”和每个职业的拉丁文“学名”都是戏拟的，不要拿去答题。写到与死亡有关的职业时，我们收起了玩笑。
+      </p>
+    </section>
+
+    <section>
+      <h2><small>Anatomy of a page</small>一页怎么读</h2>
+      <dl class="scale scale-two">
+        <div><dt>图版</dt><dd>每个职业一幅线描，画的是它最容易被认出来的装备或场面。图版是示意图，不是技术图纸。</dd></div>
+        <div><dt>标本签</dt><dd>栖息地、出没时间、识别特征（随身装备）、天敌、种群数量、分类地位，一眼看完这个职业的基本情况。</dd></div>
+        <div><dt>野外观察</dt><dd>一段现场。里面的时间、地点、数字和动作都来自公开报道，没有虚构的人物和对话。</dd></div>
+        <div><dt>它在做什么</dt><dd>用几句话讲清这份工作解决什么问题，为什么需要人来做。</dd></div>
+        <div><dt>一次完整的作业</dt><dd>把一次典型的工作拆成几步，从头走到尾。</dd></div>
+        <div><dt>冷知识</dt><dd>查资料时让我们停下来多看一眼的事实。</dd></div>
+        <div><dt>常见误认</dt><dd>外界对这个职业最常见的误会，以及实际情况。</dd></div>
+        <div><dt>如何成为</dt><dd>入行的路径、门槛、收入和难处。这一节不是求职指导，收入数字多是个案。</dd></div>
+        <div><dt>资料来源</dt><dd>这一页用到的全部来源，可以逐条点开核对。</dd></div>
+      </dl>
+    </section>
+
+    <section id="rarity">
+      <h2><small>Rarity</small>稀有度怎么定</h2>
+      <p>
+        稀有度按全国从业人数的量级来分，一共五档。人数取自行业主管部门、行业协会或权威媒体的口径，并在“种群数量”一栏写明年份和出处；没有统计的，我们根据机构数量和单位编制做保守估计，同样会在那一栏说明。它是一个量级判断，不是精确的人口普查。
+      </p>
+      <dl class="scale">
+        {
+          levels.map((level) => (
+            <div>
+              <dt><Pips value={level} label="稀有度" /></dt>
+              <dd><b>{RARITY[level].label}</b>　{RARITY[level].range}</dd>
+              <dd>{rarityNotes[level]}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <h3>种群趋势</h3>
+      <p>
+        {TREND.up.glyph} {TREND.up.label}，{TREND.flat.glyph} {TREND.flat.label}，{TREND.down.glyph} {TREND.down.label}。判断依据写在“趋势说明”里，比如新的法规、替代它的技术、招生和从业人数的变化。
+      </p>
+      <h3>编者印象</h3>
+      <p>
+        “危险”“孤独”“门槛”三项各打 1 到 5 分，是编者读完资料之后的主观印象，只用来帮你快速建立感觉，不能当作统计数据引用。
+      </p>
+      <h3>分类地位</h3>
+      <p>
+        2022 年版《中华人民共和国职业分类大典》共收 1639 个职业。条目里写了职业编码的，说明它在大典里有正式的名字；写“未定名”的，是大典里查不到它，行内人照样靠它吃饭。有的职业挂在别的职业下面当一个“工种”，我们也照实写出。编码依据的是大典的公开转录文本和各职业的国家职业标准，没有逐一核对大典原书。
+      </p>
+    </section>
+
+    <section id="sources">
+      <h2><small>Sourcing</small>资料是怎么核对的</h2>
+      <ul>
+        <li>每个条目先做一份调研笔记，逐条事实对应到实际打开读过的网页。优先用法规标准原文、主管部门和行业协会的发布、主流媒体的特稿和学术论文。</li>
+        <li>数字都带年份和口径。同一个数字有两种说法的，要么两个都写，要么不写。</li>
+        <li>带引号的话是来源里的原话，原样照录，不替人改词。</li>
+        <li>查不到的就写“查不到”“无统计”，不拿估计冒充事实。</li>
+        <li>每页底部标着最后核对的日期。职业在变，数字会过时，以来源原文为准。</li>
+      </ul>
+      <p>
+        即便如此，错漏在所难免。发现问题，请到 <a href={`${SITE.repo}/issues/new/choose`} rel="noopener">GitHub 提一条勘误</a>，附上你的依据；每个条目页的底部也有“直接改这一页”的入口。
+      </p>
+    </section>
+
+    <section id="contribute">
+      <h2><small>Contribute</small>投稿一种职业</h2>
+      <p>
+        图鉴是开源的，每个条目就是一个 Markdown 文件。你做着一份少有人知的工作，或者认识这样的人，欢迎补一条。从业者的第一手讲述最宝贵，但写进正文的事实仍然需要能公开查证的来源。
+      </p>
+      <p>
+        可以从<a href={url('/appendix/#backlog')}>待收录名单</a>里认领一种，也可以提名新的。写法、格式和核对要求见
+        <a href={`${SITE.repo}/blob/main/CONTRIBUTING.md`} rel="noopener">投稿办法</a>。
+      </p>
+    </section>
+
+    <section>
+      <h2><small>License</small>许可</h2>
+      <p>
+        文字和图版以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans" rel="noopener">CC BY 4.0</a> 发布，可以自由转载、改编，注明出处“{SITE.title}”并附上链接即可。网站代码以 MIT 许可开源。条目引用的报道、标准和论文，版权归各自的作者和机构。
+      </p>
+    </section>
+  </div>
+</Base>

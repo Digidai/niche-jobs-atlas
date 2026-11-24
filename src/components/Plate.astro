@@ -1,0 +1,36 @@
+---
+import { PLATE_ALT } from '../data/plates';
+import { pad } from '../lib/site';
+
+interface Props {
+  no: number;
+  name: string;
+  accent: string;
+  /** 首页卡片里的图版只在悬停时动，条目页里一直动 */
+  mode?: 'card' | 'full';
+}
+
+// 图版是手写的 SVG，放在 src/plates/ 下，文件名就是图鉴编号。
+const plates = import.meta.glob<string>('../plates/*.svg', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+});
+
+const { no, name, accent, mode = 'card' } = Astro.props;
+const svg = plates[`../plates/${pad(no)}.svg`];
+const alt = PLATE_ALT[no] ? `${name}图版：${PLATE_ALT[no]}` : `${name}的图版`;
+---
+
+<div class:list={['plate', `plate-${mode}`]} style={`--accent:${accent}`} role="img" aria-label={alt}>
+  {
+    svg ? (
+      <Fragment set:html={svg} />
+    ) : (
+      <div class="plate-empty">
+        <span>No. {pad(no)}</span>
+        <small>图版绘制中</small>
+      </div>
+    )
+  }
+</div>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M200 14v18" />
+  <path d="M168 62l14-30h36l14 30z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M168 62l-58 150h180L232 62z" fill="var(--tint, #e2cf9f)" stroke="none" opacity=".75" />
+  <path d="M168 62l-58 150M232 62l58 150" stroke-width="1.4" stroke-dasharray="3 8" />
+  <g class="a-float" style="--d:1.3s;--y:-7px">
+    <circle cx="194" cy="162" r="34" fill="var(--plate-fill, #ebe2cd)" />
+    <circle cx="226" cy="124" r="19" fill="var(--plate-fill, #ebe2cd)" />
+    <path d="M243 120l14 5-13 6z" fill="var(--accent, #c63d27)" stroke="var(--accent, #c63d27)" />
+    <circle cx="230" cy="119" r="2.6" fill="currentColor" stroke="none" />
+    <path d="M170 150c2 22 22 30 40 14-14 2-28-2-40-14z" fill="var(--tint, #e2cf9f)" />
+    <path d="M214 107q4-10 12-6M222 106q5-8 12-3" stroke-width="1.8" />
+    <path d="M184 196v14l-8 4M184 210l7 5M204 196v14l-8 4M204 210l7 5" stroke="var(--accent, #c63d27)" stroke-width="2" />
+  </g>
+  <path d="M60 226h280v48H60z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M153 226v48M247 226v48" />
+  <g stroke-width="2.2">
+    <circle cx="102" cy="254" r="8" />
+    <path d="M108 248l9-9M110 239h7v7" />
+    <circle cx="294" cy="246" r="8" />
+    <path d="M294 254v12M288 261h12" />
+  </g>
+  <g fill="var(--tint, #e2cf9f)" stroke-width="1.8">
+    <circle cx="180" cy="252" r="9" />
+    <circle cx="202" cy="256" r="9" />
+    <circle cx="222" cy="250" r="9" />
+  </g>
+  <path d="M114 196l-12-8M290 196l12-8" stroke="var(--accent, #c63d27)" stroke-width="2" stroke-dasharray="2 6" />
+</svg>

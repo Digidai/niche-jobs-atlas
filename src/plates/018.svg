@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- snake body -->
+  <path d="M388 250c-40 18-84 10-96-26s34-52 30-92-44-64-92-58" stroke-width="22" />
+  <path d="M388 250c-40 18-84 10-96-26s34-52 30-92-44-64-92-58" stroke="var(--tint, #e2cf9f)" stroke-width="16" />
+  <path d="M368 256l-8-12M334 258l-2-14M304 240l8-12M298 204l12-2M316 172l10 8M324 136l12-4M312 98l10-8M282 76l4-12M250 72l-2-12" stroke-width="1.8" />
+  <!-- head biting over the rim -->
+  <path d="M232 72c-26-10-58-6-74 14l-6 22 44 8c22 2 38-12 36-44z" fill="var(--tint, #e2cf9f)" />
+  <path d="M152 108l52 4" stroke-width="2" />
+  <circle cx="196" cy="84" r="4.5" fill="currentColor" stroke="none" />
+  <path d="M166 110l2 22M182 112l1 16" stroke-width="3" />
+  <!-- beaker with membrane -->
+  <path d="M112 128h132" stroke="var(--accent, #c63d27)" stroke-width="3.4" />
+  <path d="M118 128v124q0 12 12 12h96q12 0 12-12V128" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M118 236q60 12 120 0v16q0 12-12 12h-96q-12 0-12-12z" fill="var(--accent, #c63d27)" stroke="none" opacity=".85" />
+  <path d="M226 154h12M226 178h12M226 202h12M226 226h12" stroke-width="1.8" />
+  <!-- venom drops -->
+  <g fill="var(--accent, #c63d27)" stroke="none">
+    <path class="a-fall" style="--d:1.3s;--y:84px" d="M168 138q5 8 0 12-5-4 0-12z" />
+    <path class="a-fall" style="--d:1.3s;--delay:-.65s;--y:88px" d="M183 134q5 8 0 12-5-4 0-12z" />
+  </g>
+  <path d="M40 264h70M246 264h30" stroke-width="1.6" stroke-dasharray="2 7" />
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M70 38a22 22 0 1 0 24 30 18 18 0 0 1-24-30z" fill="var(--tint, #e2cf9f)" />
+  <path class="a-blink" style="--d:2.4s" d="M128 44v10M123 49h10" stroke-width="1.8" />
+  <path class="a-blink" style="--d:2.4s;--delay:-1.2s" d="M330 60v10M325 65h10" stroke-width="1.8" />
+  <path d="M24 150h352" />
+  <path d="M40 162l-8 10M92 162l-8 10M144 162l-8 10M300 162l-8 10M352 162l-8 10" stroke-width="1.6" />
+  <ellipse cx="110" cy="150" rx="34" ry="6" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M24 214h352M24 246h352" />
+  <path d="M96 208v44M112 208v44M300 208v44M316 208v44" stroke-width="1.8" />
+  <path d="M236 214l6 8-7 6 8 7-5 11" stroke="var(--accent, #c63d27)" />
+  <g fill="var(--accent, #c63d27)" stroke="none">
+    <circle class="a-rise" style="--d:1.4s;--y:-20px" cx="228" cy="206" r="3" />
+    <circle class="a-rise" style="--d:1.4s;--delay:-.45s;--y:-24px" cx="240" cy="204" r="3.4" />
+    <circle class="a-rise" style="--d:1.4s;--delay:-.9s;--y:-18px" cx="252" cy="207" r="2.6" />
+  </g>
+  <g stroke="var(--accent, #c63d27)" stroke-width="2">
+    <path class="a-blink" style="--d:1.8s" d="M224 188q16-12 32 0" />
+    <path class="a-blink" style="--d:1.8s;--delay:-.3s" d="M214 176q26-18 52 0" />
+    <path class="a-blink" style="--d:1.8s;--delay:-.6s" d="M204 164q36-24 72 0" />
+  </g>
+  <path d="M240 150V66" stroke-width="3.2" />
+  <path d="M236 150l4 9 4-9" fill="currentColor" />
+  <circle cx="240" cy="52" r="15" fill="var(--plate-fill, #ebe2cd)" />
+  <circle cx="240" cy="52" r="5" fill="currentColor" stroke="none" />
+  <g stroke-width="1.8">
+    <path class="a-blink" style="--d:1.8s;--delay:-.9s" d="M264 38q8 14 0 28" />
+    <path class="a-blink" style="--d:1.8s;--delay:-1.2s" d="M276 30q13 22 0 44" />
+    <path class="a-blink" style="--d:1.8s;--delay:-.9s" d="M216 38q-8 14 0 28" />
+    <path class="a-blink" style="--d:1.8s;--delay:-1.2s" d="M204 30q-13 22 0 44" />
+  </g>
+</svg>

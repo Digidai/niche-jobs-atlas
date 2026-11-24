@@ -1,0 +1,124 @@
+---
+import { BACKLOG, EMERGING, VANISHING, VERDICTS } from '../data/appendix';
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+---
+
+<Base
+  title="附录：伪物种、灭绝名录与待收录名单"
+  description="企鹅扶正员、酒店试睡员、年薪百万的熊猫饲养员是真的吗？附：正在消失的职业、刚被认定的新职业，以及图鉴的待收录名单。"
+  section="appendix"
+>
+  <div class="page">
+    <header class="page-head">
+      <p class="kicker">Appendix</p>
+      <h1>附录</h1>
+      <p class="lede">正文之外的三份名单：被传成“神仙工作”的伪物种，正在消失和刚刚出现的职业，还有我们想写而没来得及写的。</p>
+    </header>
+
+    <section id="pseudo">
+      <h2><small>Appendix I · Pseudospecies</small>伪物种辨析</h2>
+      <p class="intro">
+        网上隔一阵就会流传一批“轻松、高薪、名额极少”的工作。我们挑了 7 个流传最广的去查：1 个是谣言，1 个是误读，3 个是营销或招募活动，2 个是被简化了的真事。没有一个是轻松高薪的长期职业。
+      </p>
+      <ul class="verdicts">
+        {
+          VERDICTS.map((item) => (
+            <li class="verdict">
+              <h3>{item.name}</h3>
+              <span class="stamp">{item.stamp}</span>
+              <p>{item.text}</p>
+              <p class="refs">
+                来源：
+                {item.refs.map((ref, i) => (
+                  <>
+                    {i > 0 && '；'}
+                    <a href={ref.url} rel="noopener nofollow" target="_blank">{ref.title}</a>
+                  </>
+                ))}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section id="red-list">
+      <h2><small>Appendix II · Extinct &amp; Newly Described</small>灭绝与新发现</h2>
+      <p class="intro">职业也有生灭。有的被一项技术或一纸禁令带走，有的做了很多年才等到一个正式的名字。</p>
+      <div class="cols">
+        <div>
+          <h3>正在消失</h3>
+          <ul class="plain-list">
+            {
+              VANISHING.map((item) => (
+                <li>
+                  <b>{item.name}</b>
+                  <br />
+                  {item.text}
+                  <span class="refs">
+                    {' '}（{item.refs.map((ref, i) => (
+                      <>
+                        {i > 0 && '；'}
+                        <a href={ref.url} rel="noopener nofollow" target="_blank">{ref.title}</a>
+                      </>
+                    ))}）
+                  </span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div>
+          <h3>刚刚被认定</h3>
+          <ul class="plain-list">
+            {
+              EMERGING.map((item) => (
+                <li>
+                  <b>{item.name}</b>
+                  <br />
+                  {item.text}
+                  <span class="refs">
+                    {' '}（{item.refs.map((ref, i) => (
+                      <>
+                        {i > 0 && '；'}
+                        <a href={ref.url} rel="noopener nofollow" target="_blank">{ref.title}</a>
+                      </>
+                    ))}）
+                  </span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="backlog">
+      <h2><small>Appendix III · Wanted</small>待收录名单</h2>
+      <p class="intro">
+        下面这些职业已经查到了可靠的线索，还没有写成条目。每一种后面附了一个让我们想写它的事实。想认领其中一种，或者提名名单之外的，请看
+        <a href={`${SITE.repo}/blob/main/CONTRIBUTING.md`} rel="noopener">投稿办法</a>。
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>职业</th><th>为什么想写它</th><th>线索</th></tr>
+          </thead>
+          <tbody>
+            {
+              BACKLOG.map((item) => (
+                <tr>
+                  <td>{item.name}</td>
+                  <td>{item.hook}</td>
+                  <td><a href={item.ref.url} rel="noopener nofollow" target="_blank">{item.ref.title}</a></td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="refs" style="margin-top:1rem">以上内容核对截止 2026 年 11 月 24 日。</p>
+    </section>
+  </div>
+</Base>

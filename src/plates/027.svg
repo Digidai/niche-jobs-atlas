@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- slab of rock -->
+  <path d="M30 116l36-40 96-18 128 10 78 44 4 92-44 54-140 14-112-26-48-64z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M30 116l40 8M370 204l-30-6M218 272l-6-22M66 76l10 22" stroke-width="1.6" />
+  <!-- the part still covered: hatching -->
+  <g stroke-width="1.4" opacity=".7">
+    <path d="M250 110l-16 22M274 112l-16 22M298 118l-16 22M322 126l-16 22M250 190l-16 22M274 194l-16 22M298 196l-16 22M322 196l-16 22" />
+  </g>
+  <!-- fish fossil: exposed half -->
+  <path d="M70 162q12-30 44-30 22 2 30 30-8 28-30 30-32 0-44-30z" fill="var(--tint, #e2cf9f)" />
+  <circle cx="96" cy="154" r="8" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M112 136q-8 26 0 52" stroke-width="2" />
+  <path d="M144 162h96" stroke-width="3.4" />
+  <path d="M156 162l-8-30M156 162l-8 30M172 162l-8-28M172 162l-8 28M188 162l-8-26M188 162l-8 26M204 162l-8-22M204 162l-8 22M220 162l-7-18M220 162l-7 18" stroke-width="2" />
+  <!-- buried half, guessed -->
+  <path d="M240 162h60M236 162l-6-14M236 162l-6 14M252 162l-5-12M252 162l-5 12M300 162l34-26M300 162l34 26M334 136q-10 26 0 52" stroke-width="1.8" stroke-dasharray="3 6" />
+  <!-- view through the microscope -->
+  <circle cx="232" cy="158" r="46" stroke="var(--accent, #c63d27)" stroke-width="1.6" stroke-dasharray="2 6" />
+  <!-- air scribe -->
+  <g class="a-nudge" style="--d:.16s;--x:1.5px;--y:1.5px">
+    <path d="M326 46l-70 86" stroke-width="10" />
+    <path d="M256 132l-14 18" stroke="var(--tint, #e2cf9f)" stroke-width="5" />
+    <path d="M242 150l-6 8" stroke-width="2" />
+  </g>
+  <path d="M326 46q20-30 60-22" stroke-width="2" />
+  <!-- chips flying -->
+  <g fill="var(--accent, #c63d27)" stroke="none">
+    <circle class="a-rise" style="--d:.9s;--y:-22px" cx="226" cy="150" r="2.4" />
+    <circle class="a-rise" style="--d:.9s;--delay:-.3s;--y:-18px" cx="218" cy="158" r="2" />
+    <circle class="a-rise" style="--d:.9s;--delay:-.6s;--y:-26px" cx="232" cy="144" r="1.8" />
+  </g>
+</svg>

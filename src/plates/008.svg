@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path class="a-drift" style="--d:7s;--x:12px" d="M300 44q4-14 18-10 8-12 22-2 14 0 12 12z" fill="var(--plate-fill, #ebe2cd)" stroke-width="1.8" />
+  <path d="M36 268V166h84v102" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M36 200h84M36 234h84M64 166v102M92 166v102" stroke-width="1.6" />
+  <path d="M46 166v-16M64 166v-20M82 166v-14M100 166v-18M112 166v-12" stroke-width="1.8" />
+  <path d="M20 268h360" />
+  <path d="M242 268V82M262 268V82" />
+  <path d="M242 262l20-22-20-22 20-22-20-22 20-22-20-22 20-22-20-22 20-18" stroke-width="1.5" />
+  <path d="M252 40L242 72M252 40l10 32" />
+  <path d="M252 40L74 66M252 40l76 26" stroke-width="1.6" />
+  <path d="M66 66h270M66 78h196" />
+  <path d="M66 78l12-12 12 12 12-12 12 12 12-12 12 12 12-12 12 12 12-12 12 12 12-12 12 12 12-12 12 12 12-12" stroke-width="1.4" />
+  <path d="M296 66h40v26h-40z" fill="currentColor" />
+  <path d="M262 82h24v22h-24z" fill="var(--accent, #c63d27)" stroke="var(--accent, #c63d27)" />
+  <path d="M268 88h12v8h-12z" fill="var(--plate-fill, #ebe2cd)" stroke="none" />
+  <path d="M146 78h20v8h-20z" fill="currentColor" />
+  <g class="a-sway" style="--d:4.6s;--r:4deg;transform-box:view-box;transform-origin:156px 86px">
+    <path d="M156 86v62" stroke-width="1.8" />
+    <path d="M156 148q8 2 6 10t-10 4" />
+    <path d="M156 162l-26 20M156 162l26 20" stroke-width="1.6" />
+    <path d="M122 182h68M122 188h68M122 194h68" stroke="var(--accent, #c63d27)" stroke-width="3" />
+  </g>
+</svg>

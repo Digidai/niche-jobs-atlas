@@ -1,0 +1,13 @@
+---
+interface Props {
+  value: number;
+  max?: number;
+  label: string;
+}
+
+const { value, max = 5, label } = Astro.props;
+---
+
+<span class="pips" role="img" aria-label={`${label}：${value}（满分 ${max}）`}>
+  {Array.from({ length: max }, (_, i) => <i class:list={{ on: i < value }} />)}
+</span>

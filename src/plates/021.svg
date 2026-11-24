@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- microphone on a boom stand -->
+  <path d="M40 266h44M62 266V96l62-30" />
+  <path d="M118 56l36-16 10 22-36 16z" fill="currentColor" />
+  <path d="M154 40l12-5 10 22-12 5z" fill="var(--tint, #e2cf9f)" />
+  <g stroke="var(--accent, #c63d27)" stroke-width="2.2">
+    <path class="a-blink" style="--d:1.2s" d="M190 50q8 12 2 26" />
+    <path class="a-blink" style="--d:1.2s;--delay:-.2s" d="M204 44q12 18 4 40" />
+    <path class="a-blink" style="--d:1.2s;--delay:-.4s" d="M218 38q16 24 6 54" />
+  </g>
+  <!-- sand pit -->
+  <path d="M110 232h180l12 34H98z" fill="var(--tint, #e2cf9f)" />
+  <g fill="currentColor" stroke="none">
+    <circle cx="130" cy="244" r="1.5" /><circle cx="150" cy="256" r="1.5" /><circle cx="176" cy="246" r="1.5" /><circle cx="204" cy="258" r="1.5" /><circle cx="228" cy="244" r="1.5" /><circle cx="252" cy="256" r="1.5" /><circle cx="276" cy="246" r="1.5" /><circle cx="120" cy="260" r="1.5" /><circle cx="286" cy="260" r="1.5" />
+  </g>
+  <!-- shoe planted in the sand -->
+  <path d="M124 232v-22q0-10 12-10h14l10 12 26 8q12 4 12 12z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M150 200l10 12M124 222h72" stroke-width="1.8" />
+  <!-- shoe coming down -->
+  <g class="a-float" style="--d:1.1s;--y:14px">
+    <path d="M206 198v-22q0-10 12-10h14l10 12 26 8q12 4 12 12z" fill="var(--plate-fill, #ebe2cd)" />
+    <path d="M232 166l10 12M206 188h72" stroke-width="1.8" />
+  </g>
+  <path d="M214 220l-6 8M240 222v8M266 220l6 8" stroke="var(--accent, #c63d27)" stroke-width="2" />
+  <!-- snapped celery -->
+  <path d="M312 78l22 44M326 72l22 44M340 66l20 42" stroke-width="2" />
+  <path d="M308 80l36-16" stroke-width="2" />
+  <path d="M334 122l-28 36M348 116l-24 44M360 108l-18 48" stroke-width="2" />
+  <path d="M302 162l44-6" stroke-width="2" />
+  <g stroke="var(--accent, #c63d27)" stroke-width="2.4">
+    <path class="a-blink" style="--d:1.1s" d="M368 112l12-4M366 124l12 4M362 98l8-10" />
+  </g>
+  <!-- two bowls for horse hooves -->
+  <path d="M316 256a22 22 0 0 1 44 0z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M340 236l-6-20" stroke-width="1.6" stroke-dasharray="2 5" />
+  <path d="M320 266h60" stroke-width="1.6" />
+</svg>

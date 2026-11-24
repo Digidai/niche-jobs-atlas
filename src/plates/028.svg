@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- shelf -->
+  <path d="M28 132h214M28 266h344" stroke-width="3.4" />
+  <path d="M36 132v134M234 132v134" stroke-width="1.8" />
+  <!-- framed portrait -->
+  <path d="M52 46h70v86H52z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M62 56h50v66H62z" fill="var(--tint, #e2cf9f)" stroke-width="1.6" />
+  <circle cx="87" cy="82" r="10" fill="var(--plate-fill, #ebe2cd)" stroke-width="1.8" />
+  <path d="M68 122q2-22 19-22t19 22" fill="var(--plate-fill, #ebe2cd)" stroke-width="1.8" />
+  <!-- a row of books, one hides a letter -->
+  <path d="M140 132V66h18v66M158 132V78h16v54M196 132V60h20v72" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M174 132l14-64 18 4-12 60" fill="var(--plate-fill, #ebe2cd)" />
+  <g class="a-float" style="--d:2.6s;--y:-9px">
+    <path d="M160 56h30v22h-30z" fill="var(--accent, #c63d27)" stroke="var(--accent, #c63d27)" />
+    <path d="M160 56l15 12 15-12" stroke="var(--plate-fill, #ebe2cd)" stroke-width="1.6" />
+  </g>
+  <!-- labelled boxes -->
+  <path d="M50 190h76v76H50zM140 206h80v60h-80z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M50 206h76M140 220h80M88 190v16M180 206v14" stroke-width="1.8" />
+  <path d="M66 224h44v20H66zM158 232h44v18h-44z" fill="var(--tint, #e2cf9f)" stroke-width="1.6" />
+  <path d="M74 234h28M166 241h28" stroke-width="1.6" />
+  <!-- inventory on a clipboard -->
+  <path d="M264 44h104v186H264z" fill="var(--card, #f9f4e9)" />
+  <path d="M298 36h36v16h-36z" fill="currentColor" />
+  <g stroke-width="1.8">
+    <path d="M280 80h14v14h-14zM280 112h14v14h-14zM280 144h14v14h-14zM280 176h14v14h-14z" />
+    <path d="M304 87h46M304 119h38M304 151h46M304 183h30" />
+  </g>
+  <g stroke="var(--accent, #c63d27)" stroke-width="3">
+    <path d="M282 86l5 6 9-12M282 118l5 6 9-12M282 150l5 6 9-12" />
+  </g>
+  <!-- camera recording the whole process -->
+  <path d="M296 266v-22" />
+  <path d="M276 244h40v-20h-40z" fill="currentColor" />
+  <path d="M316 230l14-6v20l-14-6z" fill="currentColor" />
+  <circle class="a-blink" style="--d:1.2s" cx="284" cy="231" r="3" fill="var(--accent, #c63d27)" stroke="none" />
+</svg>

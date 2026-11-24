@@ -1,0 +1,26 @@
+name: 勘误
+description: 条目里有数字过时、说法不准或者链接失效
+title: '勘误：'
+labels: [勘误]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: 哪一个条目
+      placeholder: 比如：No. 010 引航员
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: 哪里不对
+      description: 把有问题的那句话贴出来。
+    validations:
+      required: true
+  - type: textarea
+    id: right
+    attributes:
+      label: 应该是什么，依据是什么
+      description: 请附上来源链接。如果你是从业者，也欢迎直接告诉我们实际情况是怎样的。
+    validations:
+      required: true

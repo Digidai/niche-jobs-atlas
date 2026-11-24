@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M24 58h112M224 58h152" />
+  <path d="M136 58v84M224 58v84" />
+  <path d="M128 50h104" stroke-width="4" />
+  <path d="M152 44v112M176 44v112" stroke-width="2" />
+  <path d="M152 70h24M152 92h24M152 114h24M152 136h24" stroke-width="2" />
+  <path d="M24 142h112M224 142h152M24 270h352" />
+  <path d="M24 176q11-7 22 0t22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0v94H24z" fill="var(--tint, #e2cf9f)" stroke="none" opacity=".8" />
+  <path class="a-drift" style="--d:3s;--x:5px" d="M24 176q11-7 22 0t22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0 22 0" stroke-width="1.8" />
+  <path d="M30 270q14-22 34-18t26-8 26 26" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M252 246q-8 12-6 24h60q2-12-6-24z" fill="var(--plate-fill, #ebe2cd)" />
+  <circle cx="276" cy="220" r="27" fill="var(--plate-fill, #ebe2cd)" />
+  <circle cx="268" cy="220" r="11" fill="var(--tint, #e2cf9f)" />
+  <circle cx="296" cy="212" r="4" /><path d="M276 193v-7M262 197l-4-6" stroke-width="2" />
+  <path d="M250 252q-30 4-56-10" stroke-width="5" />
+  <path d="M194 242l-10-7M194 242l-12 1M194 242l-9 8" stroke-width="2" />
+  <path class="a-dash" style="--d:2s" d="M290 197c20-40-6-60-50-66-26-4-34-30-32-90" stroke="var(--accent, #c63d27)" stroke-width="2.6" stroke-dasharray="7 6" />
+  <path d="M200 34h16v12h-16z" fill="var(--accent, #c63d27)" stroke="var(--accent, #c63d27)" />
+  <g stroke-width="1.8">
+    <circle class="a-rise" style="--d:2.2s;--y:-26px" cx="304" cy="196" r="3.4" />
+    <circle class="a-rise" style="--d:2.2s;--delay:-.8s;--y:-24px" cx="314" cy="200" r="2.4" />
+    <circle class="a-rise" style="--d:2.2s;--delay:-1.5s;--y:-28px" cx="322" cy="194" r="3" />
+  </g>
+</svg>

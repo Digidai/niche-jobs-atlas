@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 投稿办法
+    url: https://github.com/Digidai/niche-jobs-atlas/blob/main/CONTRIBUTING.md
+    about: 想自己写一条？先看这里：收什么，怎么写，怎么核对。
+  - name: 待收录名单
+    url: https://digidai.github.io/niche-jobs-atlas/appendix/#backlog
+    about: 已经查到线索、还没写成条目的职业，可以认领。

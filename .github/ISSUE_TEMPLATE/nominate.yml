@@ -1,0 +1,42 @@
+name: 提名一种职业
+description: 告诉我们还有什么小众职业值得收进图鉴
+title: '提名：'
+labels: [提名]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 职业名称
+      placeholder: 比如：文物钟表修复师
+    validations:
+      required: true
+  - type: textarea
+    id: hook
+    attributes:
+      label: 它哪里让人好奇
+      description: 一个反直觉的事实，一个想不到的工具，一种少见的工作环境。
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 可靠的来源
+      description: 能证明这份工作真实存在的链接，一两个就够。主流媒体的报道、行业协会或主管部门的发布最好。
+    validations:
+      required: true
+  - type: dropdown
+    id: relation
+    attributes:
+      label: 你和这个职业的关系
+      options:
+        - 我就是干这行的
+        - 我认识干这行的人
+        - 我只是好奇
+    validations:
+      required: true
+  - type: checkboxes
+    id: write
+    attributes:
+      label: 你愿意来写这一条吗
+      options:
+        - label: 我想认领，自己来写

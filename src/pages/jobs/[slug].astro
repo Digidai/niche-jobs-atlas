@@ -1,0 +1,245 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Pips from '../../components/Pips.astro';
+import Plate from '../../components/Plate.astro';
+import { orderOf } from '../../data/orders';
+import Base from '../../layouts/Base.astro';
+import { parseEntry } from '../../lib/entry';
+import { RARITY, SITE, STAT_LABELS, TREND, pad, url } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const jobs = (await getCollection('jobs')).sort((a, b) => a.data.no - b.data.no);
+  return jobs.map((job, i) => ({
+    params: { slug: job.id },
+    props: { job, prev: jobs[i - 1] ?? null, next: jobs[i + 1] ?? null },
+  }));
+}
+
+interface Props {
+  job: CollectionEntry<'jobs'>;
+  prev: CollectionEntry<'jobs'> | null;
+  next: CollectionEntry<'jobs'> | null;
+}
+
+const { job, prev, next } = Astro.props;
+const { data } = job;
+const order = orderOf(data.order);
+const entry = parseEntry(job.body ?? '', job.id);
+const file = job.filePath ?? `src/content/jobs/${pad(data.no)}-${job.id}.md`;
+const updated = data.updated.toISOString().slice(0, 10);
+const two = (n: number) => String(n).padStart(2, '0');
+// 来源先列主要的几条，其余的折叠起来
+const MAIN_SOURCES = 8;
+const mainSources = entry.sources.slice(0, MAIN_SOURCES);
+const moreSources = entry.sources.slice(MAIN_SOURCES);
+// 首字下沉只在现场段以汉字开头时用；以数字、引号开头的不拆
+const dropcap = /^[\u4e00-\u9fff]/.test(entry.scene[0] ?? '');
+---
+
+<Base title={`${data.name}（${data.en}）`} description={`${data.hook} ${SITE.title} No. ${pad(data.no)}。`}>
+  <article class="entry" style={`--accent:${order.color}`}>
+    <nav class="crumbs" aria-label="位置">
+      <a href={url('/')}>图鉴</a>
+      <span aria-hidden="true">/</span>
+      <a href={url(`/#${order.slug}`)}>{order.key}</a>
+      <span aria-hidden="true">/</span>
+      <span>No. {pad(data.no)}</span>
+    </nav>
+
+    <header class="entry-head">
+      <figure class="entry-plate">
+        <Plate no={data.no} name={data.name} accent={order.color} mode="full" />
+        <figcaption>
+          <span>图版 {pad(data.no)}</span>
+          <span>{data.name} · {data.gear.join('、')}</span>
+        </figcaption>
+      </figure>
+
+      <div class="entry-title">
+        <p class="entry-no">
+          No. {pad(data.no)}
+          <span class="entry-order">{order.key} · <i lang="la">{order.latin}</i></span>
+        </p>
+        <h1 class:list={{ 'is-long': [...data.name].length >= 7 }}>{data.name}</h1>
+        <p class="entry-latin">
+          <i lang="la">{data.latin}</i>
+          <span>{data.en}</span>
+        </p>
+        {data.aka.length > 0 && <p class="entry-aka">俗名：{data.aka.join('、')}</p>}
+        <p class="entry-hook">{data.hook}</p>
+
+        <dl class="badges">
+          <div>
+            <dt>稀有度</dt>
+            <dd>
+              <Pips value={data.rarity} label="稀有度" />
+              <b>{RARITY[data.rarity].label}</b>
+              <small>{RARITY[data.rarity].range}</small>
+            </dd>
+          </div>
+          <div>
+            <dt>种群趋势</dt>
+            <dd>
+              <span class={`trend trend-${data.trend}`} aria-hidden="true">{TREND[data.trend].glyph}</span>
+              <b>{TREND[data.trend].label}</b>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <section class="label-card" aria-label="标本签">
+      <h2 class="label-title">标本签</h2>
+      <dl class="label-grid">
+        <div><dt>栖息地</dt><dd>{data.habitat}</dd></div>
+        <div><dt>出没时间</dt><dd>{data.active}</dd></div>
+        <div>
+          <dt>识别特征</dt>
+          <dd><ul class="chips">{data.gear.map((item) => <li>{item}</li>)}</ul></dd>
+        </div>
+        <div><dt>天敌</dt><dd>{data.nemesis}</dd></div>
+        <div><dt>种群数量</dt><dd>{data.population}</dd></div>
+        <div><dt>趋势说明</dt><dd>{data.trendNote}</dd></div>
+        <div><dt>分类地位</dt><dd>{data.status}</dd></div>
+        <div>
+          <dt>编者印象</dt>
+          <dd>
+            <ul class="scores">
+              {
+                (Object.keys(STAT_LABELS) as (keyof typeof STAT_LABELS)[]).map((key) => (
+                  <li>
+                    <span>{STAT_LABELS[key]}</span>
+                    <Pips value={data.stats[key]} label={STAT_LABELS[key]} />
+                  </li>
+                ))
+              }
+            </ul>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <div class="entry-body">
+      <section class="sec sec-scene">
+        <h2><span class="sec-no">壹</span>野外观察</h2>
+        <div class:list={['scene', { 'scene-dropcap': dropcap }]}>
+          {entry.scene.map((html) => <p set:html={html} />)}
+        </div>
+      </section>
+
+      <section class="sec">
+        <h2><span class="sec-no">贰</span>它在做什么</h2>
+        {entry.what.map((html) => <p set:html={html} />)}
+      </section>
+
+      <section class="sec">
+        <h2><span class="sec-no">叁</span>一次完整的作业</h2>
+        <ol class="steps">
+          {
+            entry.steps.map((step) => (
+              <li>
+                <h3>{step.title}</h3>
+                <p set:html={step.html} />
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+
+      <section class="sec">
+        <h2><span class="sec-no">肆</span>冷知识</h2>
+        <ul class="facts">
+          {
+            entry.facts.map((html, i) => (
+              <li>
+                <span class="fact-no" aria-hidden="true">{two(i + 1)}</span>
+                <p set:html={html} />
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="sec">
+        <h2><span class="sec-no">伍</span>常见误认</h2>
+        <ul class="myths">
+          {
+            entry.myths.map((item) => (
+              <li>
+                <p class="myth"><span class="tag tag-myth">误认</span><span set:html={item.myth} /></p>
+                <p class="fact"><span class="tag tag-fact">实际</span><span set:html={item.fact} /></p>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="sec">
+        <h2><span class="sec-no">陆</span>如何成为</h2>
+        {entry.path.map((html) => <p set:html={html} />)}
+      </section>
+
+      <section class="sec sec-sources">
+        <h2><span class="sec-no">柒</span>资料来源</h2>
+        <ol class="sources">
+          {
+            mainSources.map((source) => (
+              <li>
+                <a href={source.url} rel="noopener nofollow" target="_blank">{source.title}</a>
+                {source.meta && <span>{source.meta}</span>}
+              </li>
+            ))
+          }
+        </ol>
+        {
+          moreSources.length > 0 && (
+            <details class="more-sources">
+              <summary>展开其余 {moreSources.length} 条来源</summary>
+              <ol class="sources" start={mainSources.length + 1}>
+                {moreSources.map((source) => (
+                  <li>
+                    <a href={source.url} rel="noopener nofollow" target="_blank">{source.title}</a>
+                    {source.meta && <span>{source.meta}</span>}
+                  </li>
+                ))}
+              </ol>
+            </details>
+          )
+        }
+        <p class="entry-meta">
+          最后核对：<time datetime={updated}>{updated}</time>。发现错漏，可以
+          <a href={`${SITE.repo}/edit/main/${file}`} rel="noopener">直接改这一页</a>，或者
+          <a href={`${SITE.repo}/issues/new/choose`} rel="noopener">提一条勘误</a>。
+        </p>
+      </section>
+    </div>
+
+    <nav class="pager" aria-label="相邻条目">
+      {
+        prev ? (
+          <a class="pager-link" href={url(`/jobs/${prev.id}/`)} rel="prev">
+            <small>← No. {pad(prev.data.no)}</small>
+            <b>{prev.data.name}</b>
+          </a>
+        ) : (
+          <span />
+        )
+      }
+      <button class="btn btn-primary" type="button" data-encounter>
+        <span class="btn-dot" aria-hidden="true"></span>
+        <span data-encounter-label="再随机遇见一种">再随机遇见一种</span>
+      </button>
+      {
+        next ? (
+          <a class="pager-link pager-next" href={url(`/jobs/${next.id}/`)} rel="next">
+            <small>No. {pad(next.data.no)} →</small>
+            <b>{next.data.name}</b>
+          </a>
+        ) : (
+          <span />
+        )
+      }
+    </nav>
+  </article>
+</Base>

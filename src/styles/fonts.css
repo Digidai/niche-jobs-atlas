@@ -1,0 +1,43 @@
+/* 这个文件由 scripts/build-fonts.mjs 生成，不要手改。
+   字体是按网站实际用到的字裁出来的子集：思源宋体、霞鹜文楷、IM Fell English，均为 SIL OFL 许可。 */
+
+@font-face {
+  font-family: 'Atlas Song';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../assets/fonts/atlas-song.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Atlas Kai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/atlas-kai.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Atlas Num';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/atlas-num.woff2') format('woff2');
+  unicode-range: U+0030-0039;
+}
+
+@font-face {
+  font-family: 'Atlas Fell';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/atlas-fell.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Atlas Fell';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/atlas-fell-italic.woff2') format('woff2');
+}

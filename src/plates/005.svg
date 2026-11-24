@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M62 198c0-22 10-36 30-40 24-4 44-18 62-44l22-34c10 2 20 10 26 22 20 40 52 62 100 70 26 4 38 12 38 30z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M56 198h290q4 12-4 24H64q-10-10-8-24z" fill="var(--tint, #e2cf9f)" />
+  <path d="M76 222h256" stroke-width="1.6" stroke-dasharray="3 7" />
+  <path d="M176 80c-14 6-20 18-18 34" />
+  <path d="M160 122l40-14M170 138l40-14M182 152l40-12M196 164l38-10" stroke-width="2" />
+  <path d="M92 158c16 8 32 10 50 6" stroke-width="1.8" stroke-dasharray="5 6" />
+  <path d="M252 152c22 14 50 22 84 24" stroke-width="1.8" stroke-dasharray="5 6" />
+  <path d="M216 190c30-4 62-2 96 6" stroke="var(--accent, #c63d27)" stroke-width="4" />
+  <g class="a-nudge" style="--d:3.2s;--x:16px;--y:5px">
+    <circle cx="124" cy="150" r="40" fill="var(--plate-fill, #ebe2cd)" fill-opacity=".9" stroke-width="4" />
+    <path d="M96 150c14 8 34 10 56 2" stroke="var(--accent, #c63d27)" stroke-width="3" stroke-dasharray="8 7" />
+    <path d="M100 166c14 6 30 7 46 2" stroke-width="1.6" stroke-dasharray="3 6" />
+    <path d="M95 178l-32 34" stroke-width="8" />
+  </g>
+  <g transform="rotate(9 318 78)" stroke="var(--accent, #c63d27)">
+    <rect x="286" y="46" width="64" height="64" rx="6" stroke-width="3.5" />
+    <path d="M302 80l12 13 22-28" stroke-width="5" />
+  </g>
+  <path d="M40 252h320" stroke-width="1.6" stroke-dasharray="2 7" />
+</svg>

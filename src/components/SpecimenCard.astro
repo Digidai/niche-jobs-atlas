@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { orderOf } from '../data/orders';
+import { RARITY, TREND, pad, url } from '../lib/site';
+import Pips from './Pips.astro';
+import Plate from './Plate.astro';
+
+interface Props {
+  job: CollectionEntry<'jobs'>;
+}
+
+const { job } = Astro.props;
+const { data } = job;
+const order = orderOf(data.order);
+const keywords = [data.name, ...data.aka, data.en, data.latin, data.hook, data.order].join(' ').toLowerCase();
+---
+
+<a class="card" href={url(`/jobs/${job.id}/`)} style={`--accent:${order.color}`} data-card data-keywords={keywords}>
+  <Plate no={data.no} name={data.name} accent={order.color} />
+  <div class="card-body">
+    <p class="card-no">No. {pad(data.no)}</p>
+    <h3 class="card-name">{data.name}</h3>
+    <p class="card-latin" lang="la">{data.latin}</p>
+    <p class="card-hook">{data.hook}</p>
+  </div>
+  <p class="card-foot">
+    <span class="card-rarity">
+      <Pips value={data.rarity} label="稀有度" />
+      {RARITY[data.rarity].label}
+    </span>
+    <span class="card-trend" title={TREND[data.trend].label}>{TREND[data.trend].glyph}</span>
+  </p>
+</a>

@@ -1,0 +1,78 @@
+---
+// 社交分享图的版面。public/og.png 就是这一页在 1200×630 的窗口里截出来的。
+import { getCollection } from 'astro:content';
+import Plate from '../components/Plate.astro';
+import { ORDERS, orderOf } from '../data/orders';
+import '../styles/global.css';
+import { SITE, pad } from '../lib/site';
+
+const jobs = (await getCollection('jobs')).sort((a, b) => a.data.no - b.data.no);
+const cover = [11, 6, 21].map((no) => jobs.find((job) => job.data.no === no)!).filter(Boolean);
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1200" />
+    <meta name="robots" content="noindex" />
+    <title>{SITE.title}</title>
+    <style>
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+      }
+      .hero {
+        grid-template-columns: auto minmax(0, 1fr) 372px;
+        gap: 44px;
+        max-width: none;
+        height: 630px;
+        padding: 0 52px;
+        border: 12px solid var(--ink);
+      }
+      .hero-title {
+        font-size: 82px;
+      }
+      .lede {
+        font-size: 28px;
+        line-height: 1.6;
+      }
+      .hero-text {
+        font-size: 18px;
+      }
+      .tally {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-title">
+        <span class="hero-title-main">小众职业</span>
+        <span class="hero-title-sub">图鉴</span>
+      </div>
+      <div class="hero-body">
+        <p class="kicker">A Field Guide to Niche Jobs · {SITE.edition}</p>
+        <p class="lede">把冷门职业当成稀有物种来观察的野外手册。</p>
+        <p class="hero-text">嗅辨员、听漏工、饱和潜水员、守时人、拟音师……每个职业一页图版和一段现场笔记，每一条事实都注明来源。</p>
+        <dl class="tally">
+          <div><dt>收录</dt><dd>{jobs.length}<small>种</small></dd></div>
+          <div><dt>分作</dt><dd>{ORDERS.length}<small>目</small></dd></div>
+        </dl>
+      </div>
+      <div class="hero-plates">
+        {
+          cover.map((job, i) => (
+            <div class={`cover-plate cover-plate-${i + 1}`} style={`--accent:${orderOf(job.data.order).color}`}>
+              <Plate no={job.data.no} name={job.data.name} accent={orderOf(job.data.order).color} mode="full" />
+              <span class="cover-caption">
+                <b>No. {pad(job.data.no)}</b> {job.data.name}
+              </span>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </body>
+</html>

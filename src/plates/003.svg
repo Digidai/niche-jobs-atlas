@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M56 40h288v206H56z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M40 204h320v42H40z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M72 246v22M328 246v22" />
+  <g stroke-width="1.5">
+    <path d="M84 70v126M98 70v126M112 70v126M126 70v126M140 70v126M154 70v126M168 70v126M182 70v126M196 70v126M210 70v126M224 70v126M238 70v126M252 70v126M266 70v126M280 70v126M294 70v126M308 70v126" />
+  </g>
+  <g fill="currentColor" stroke="none">
+    <circle cx="84" cy="62" r="3" /><circle cx="98" cy="62" r="3" /><circle cx="112" cy="62" r="3" /><circle cx="126" cy="62" r="3" /><circle cx="140" cy="62" r="3" /><circle cx="154" cy="62" r="3" /><circle cx="168" cy="62" r="3" /><circle cx="182" cy="62" r="3" /><circle cx="196" cy="62" r="3" /><circle cx="210" cy="62" r="3" /><circle cx="224" cy="62" r="3" /><circle cx="238" cy="62" r="3" /><circle cx="252" cy="62" r="3" /><circle cx="266" cy="62" r="3" /><circle cx="280" cy="62" r="3" /><circle cx="294" cy="62" r="3" /><circle cx="308" cy="62" r="3" />
+  </g>
+  <path d="M76 128q7-12 15 0t14 0 14 0 14 0 14 0 14 0 14 0 14 0 14 0 14 0 14 0 14 0 14 0 14 0 14 0 14 0 14 0" stroke="var(--accent, #c63d27)" stroke-width="4" />
+  <path d="M64 212h272v26H64z" />
+  <path d="M81 212v26M98 212v26M115 212v26M132 212v26M149 212v26M166 212v26M183 212v26M200 212v26M217 212v26M234 212v26M251 212v26M268 212v26M285 212v26M302 212v26M319 212v26" stroke-width="1.4" />
+  <g fill="currentColor" stroke="none">
+    <path d="M77 212h8v15h-8zM94 212h8v15h-8zM128 212h8v15h-8zM145 212h8v15h-8zM162 212h8v15h-8zM196 212h8v15h-8zM213 212h8v15h-8zM247 212h8v15h-8zM264 212h8v15h-8zM281 212h8v15h-8zM315 212h8v15h-8z" />
+  </g>
+  <g class="a-sway" style="--d:2.2s;--r:7deg;transform-box:view-box;transform-origin:196px 62px">
+    <path d="M196 62l52-40" stroke="var(--accent, #c63d27)" stroke-width="7" />
+    <path d="M248 22l18-14" stroke-width="9" />
+    <circle cx="196" cy="62" r="7" fill="var(--plate-fill, #ebe2cd)" />
+  </g>
+  <path d="M352 96V70M342 70V40M362 70V40M342 70q10 8 20 0" />
+  <path class="a-blink" style="--d:.9s" d="M334 44v14M370 44v14" stroke-width="1.6" />
+</svg>

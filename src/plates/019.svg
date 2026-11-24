@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- crosswalk -->
+  <g fill="var(--plate-fill, #ebe2cd)" stroke-width="1.8">
+    <path d="M40 244h44l-10 30H24zM112 244h44l-6 30h-54zM184 244h44l-2 30h-50zM256 244h44l6 30h-54zM328 244h44l14 30h-54z" />
+  </g>
+  <!-- trainer, blindfolded -->
+  <circle cx="92" cy="62" r="17" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M75 58h34" stroke="var(--accent, #c63d27)" stroke-width="8" />
+  <path d="M109 56l10-6M109 60l11 2" stroke="var(--accent, #c63d27)" stroke-width="2" />
+  <path d="M74 86q18-10 36 0l8 82H68z" fill="var(--tint, #e2cf9f)" />
+  <path d="M80 168l-6 72M104 168l6 72" stroke-width="5" />
+  <path d="M66 240h16M102 240h18" stroke-width="3.4" />
+  <path d="M106 96l52 44" stroke-width="5" />
+  <!-- harness handle -->
+  <path d="M158 140l62 34M168 132l60 34" stroke="var(--accent, #c63d27)" stroke-width="3" />
+  <path d="M154 144l16-14" stroke="var(--accent, #c63d27)" stroke-width="5" />
+  <!-- dog -->
+  <path d="M204 178q46-14 96 0 10 6 8 22l-4 14H212l-10-14q-4-14 2-22z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M296 174q8-22 30-22 20 2 30 20l12 6-4 10-28 4q-18 6-34-4z" fill="var(--plate-fill, #ebe2cd)" />
+  <path d="M318 154q-14 10-10 34 12 0 14-12z" fill="currentColor" />
+  <circle cx="340" cy="168" r="2.6" fill="currentColor" stroke="none" />
+  <circle cx="366" cy="180" r="3.4" fill="currentColor" stroke="none" />
+  <path d="M216 214l-4 30M236 214l2 30M282 214l-2 30M300 214l4 30" stroke-width="5" />
+  <path d="M234 172v44M254 170v46" stroke="var(--accent, #c63d27)" stroke-width="4" />
+  <path class="a-sway" style="--d:.7s;--r:14deg;--o:100% 100%" d="M204 182q-18-6-22-24" stroke-width="4" />
+</svg>
