@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, url } from '../lib/site';
+---
+
+<Base title="查无此种" description="这一页不存在。">
+  <div class="page">
+    <header class="page-head">
+      <p class="kicker">No. 404 · Species not found</p>
+      <h1>查无此种</h1>
+      <p class="lede">这一页在图鉴里找不到。可能是地址写错了，也可能是这种职业还没有人来写。</p>
+    </header>
+    <p>
+      <a class="btn btn-ghost" href={url('/')}>回到图鉴</a>
+      <button class="btn btn-primary" type="button" data-encounter style="margin-left:0.8rem">
+        <span class="btn-dot" aria-hidden="true"></span>
+        <span data-encounter-label="随机遇见一种">随机遇见一种</span>
+      </button>
+    </p>
+    <p class="intro" style="margin-top:2rem">
+      如果你要找的职业确实存在，欢迎到 <a href={`${SITE.repo}/issues/new/choose`} rel="noopener">GitHub 提名</a>。
+    </p>
+  </div>
+</Base>
